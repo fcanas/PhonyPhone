@@ -9,13 +9,36 @@
 #import "PHNYScreenViewController.h"
 
 @interface PHNYScreenViewController ()
-@property (weak, nonatomic) IBOutlet UIView *containerView;
 @property (strong, nonatomic) NSArray *internalConstraints;
 
 @property (strong, nonatomic) NSArray *sizeConstraints;
 @end
 
 @implementation PHNYScreenViewController
+
+- (IBAction)setToFour:(id)sender
+{
+    [self constrainToSize:CGSizeMake(320, 480)
+                     view:self.containerView];
+}
+
+- (IBAction)setToFive:(id)sender
+{
+    [self constrainToSize:CGSizeMake(320, 568)
+                     view:self.containerView];
+}
+
+- (IBAction)setToSix:(id)sender
+{
+    [self constrainToSize:CGSizeMake(375, 667)
+                     view:self.containerView];
+}
+
+- (IBAction)setToSixPlus:(id)sender
+{
+    [self constrainToSize:CGSizeMake(414, 736)
+                     view:self.containerView];
+}
 
 - (void)viewDidLoad
 {

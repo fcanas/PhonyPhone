@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Screen View Controller-->
@@ -17,18 +18,67 @@
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <containerView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="woY-mm-9Pr">
-                                <rect key="frame" x="224" y="272" width="320" height="480"/>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="woY-mm-9Pr">
+                                <rect key="frame" x="224" y="242" width="320" height="480"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="320" placeholder="YES" id="TV8-X8-D3z"/>
+                                    <constraint firstAttribute="height" constant="480" placeholder="YES" id="Xn1-Sf-xZv"/>
+                                </constraints>
                                 <connections>
                                     <segue destination="PJt-cr-l4S" kind="embed" id="8HJ-fm-iXs"/>
                                 </connections>
                             </containerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Cl-y8-Hm5">
+                                <rect key="frame" x="83" y="936" width="61" height="30"/>
+                                <state key="normal" title="iPhone 4">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="setToFive:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WMv-2Y-tzK"/>
+                                    <action selector="setToFour:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6zH-Zr-tMT"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l58-d8-g3m">
+                                <rect key="frame" x="257" y="936" width="61" height="30"/>
+                                <state key="normal" title="iPhone 5">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="setToFive:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0zo-Ep-FE8"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yD7-Iu-sea">
+                                <rect key="frame" x="412" y="936" width="61" height="30"/>
+                                <state key="normal" title="iPhone 6">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="setToSix:" destination="BYZ-38-t0r" eventType="touchUpInside" id="N4C-7U-oTF"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xBR-vr-pj7">
+                                <rect key="frame" x="591" y="936" width="94" height="30"/>
+                                <state key="normal" title="iPhone 6 Plus">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="setToSixPlus:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8VN-F9-Lkv"/>
+                                </connections>
+                            </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="centerY" secondItem="woY-mm-9Pr" secondAttribute="centerY" id="HNb-WV-wyJ"/>
+                            <constraint firstItem="l58-d8-g3m" firstAttribute="centerY" secondItem="yD7-Iu-sea" secondAttribute="centerY" id="1RJ-f8-9Rq"/>
+                            <constraint firstItem="l58-d8-g3m" firstAttribute="leading" secondItem="5Cl-y8-Hm5" secondAttribute="trailing" constant="113" id="DqZ-Zq-eH8"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="5Cl-y8-Hm5" secondAttribute="bottom" constant="58" id="Dyr-sV-JI6"/>
+                            <constraint firstItem="l58-d8-g3m" firstAttribute="centerY" secondItem="5Cl-y8-Hm5" secondAttribute="centerY" id="FYl-zq-m1u"/>
+                            <constraint firstAttribute="centerY" secondItem="woY-mm-9Pr" secondAttribute="centerY" constant="30" id="HNb-WV-wyJ"/>
                             <constraint firstAttribute="centerX" secondItem="woY-mm-9Pr" secondAttribute="centerX" id="S8f-rK-Ujv"/>
+                            <constraint firstItem="yD7-Iu-sea" firstAttribute="centerY" secondItem="xBR-vr-pj7" secondAttribute="centerY" id="UFe-Gq-nFz"/>
+                            <constraint firstItem="5Cl-y8-Hm5" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="63" id="WcR-ps-cII"/>
+                            <constraint firstItem="xBR-vr-pj7" firstAttribute="leading" secondItem="yD7-Iu-sea" secondAttribute="trailing" constant="118" id="YW4-FY-atV"/>
+                            <constraint firstItem="yD7-Iu-sea" firstAttribute="leading" secondItem="l58-d8-g3m" secondAttribute="trailing" constant="94" id="uYk-Vg-tAm"/>
                         </constraints>
                     </view>
                     <connections>
