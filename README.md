@@ -1,6 +1,6 @@
 # PhonyPhone
 
-[![CI Status](http://img.shields.io/travis/Fabian Canas/PhonyPhone.svg?style=flat)](https://travis-ci.org/fcanas/PhonyPhone)
+[![CI Status](http://img.shields.io/travis/fcanas/PhonyPhone.svg?style=flat)](https://travis-ci.org/fcanas/PhonyPhone)
 [![Version](https://img.shields.io/cocoapods/v/PhonyPhone.svg?style=flat)](http://cocoadocs.org/docsets/PhonyPhone)
 [![License](https://img.shields.io/cocoapods/l/PhonyPhone.svg?style=flat)](http://cocoadocs.org/docsets/PhonyPhone)
 [![Platform](https://img.shields.io/cocoapods/p/PhonyPhone.svg?style=flat)](http://cocoadocs.org/docsets/PhonyPhone)
